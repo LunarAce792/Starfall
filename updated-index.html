@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Fall</title>
+    <link rel="stylesheet" href="updated-styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Main Menu -->
+        <div id="main-menu" class="game-section active">
+            <h1>Star Fall</h1>
+            <h2>Fight through the lands of Galdur!</h2>
+            <button id="new-game-btn">New Game</button>
+            <button id="how-to-play-btn">How to Play</button>
+            <button id="load-game-btn">Load Game</button>
+            <button id="sound-toggle" style="margin-top: 20px;">Sound: ON</button>
+        </div>
+
+        <!-- Credits Screen -->
+        <div id="credits-screen" class="game-section">
+            <h2>Credits</h2>
+            <div class="section-content">
+            <p>Game developed by 1stMoonBat.</p>
+            <button id="back-to-menu-btn-credits">Back to Menu</button>
+            </div>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="game-over-screen" class="game-section">
+            <h2>Game Over</h2>
+            <div class="section-content">
+            <p>Thank you for playing!</p>
+            <button id="restart-game-btn">Restart Game</button>
+            <button id="exit-to-menu-btn">Exit to Menu</button>
+            </div>
+        </div>
+
+        <!-- Battle Interface -->
+        <div id="battle-interface" class="game-section">
+            <h2>Battle</h2>
+            <div class="section-content">
+                <div id="locale-info"></div>
+                <div id="turn-indicator">Turn: 1</div>
+                <div id="battle-grid" class="battle-grid"></div>
+                <div class="team-container">
+                    <div class="team-column">
+                        <h3>Your Team</h3>
+                        <div id="battle-player-team"></div>
+                    </div>
+                    <div class="team-column">
+                        <h3>Enemy Team</h3>
+                        <div id="battle-enemy-team"></div>
+                    </div>
+                </div>
+                <div id="action-panel">
+                    <h3>Actions</h3>
+                    <div id="current-unit"></div>
+                    <div id="ability-choices"></div>
+                </div>
+                <div class="battle-log" id="battle-log"></div>
+                <button id="end-turn-btn" style="display: none;">End Turn</button>
+                <button id="leave-shop-btn" style="display: none;">Leave Shop</button>
+            </div>
+        </div>
+
+        <!-- Character Screen -->
+        <div id="character-screen" class="game-section">
+            <h2>Character</h2>
+            <div class="section-content">
+            <div id="character-stats"></div>
+            <div id="character-abilities"></div>
+            <button id="exit-character-btn">Exit Character</button>
+            </div>
+        </div>
+
+        <!-- Quest Log Screen -->
+        <div id="quest-log-screen" class="game-section">
+            <h2>Quest Log</h2>
+            <div class="section-content">
+            <div id="quest-list"></div>
+            <button id="exit-quest-log-btn">Exit Quest Log</button>
+            </div>
+        </div>
+
+        <!-- Inventory Screen -->
+        <div id="inventory-screen" class="game-section">
+            <h2>Inventory</h2>
+            <div class="section-content">
+            <div id="inventory-items"></div>
+            <button id="exit-inventory-btn">Exit Inventory</button>
+            </div>
+        </div>
+
+        <!-- Settings Screen -->
+        <div id="settings-screen" class="game-section">
+            <h2>Settings</h2>
+            <div class="section-content">
+            <label for="volume-control">Volume:</label>
+            <input type="range" id="volume-control" min="0" max="100" value="50">
+            <button id="save-settings-btn">Save Settings</button>
+            <button id="exit-settings-btn">Exit Settings</button>
+            </div>
+        </div>
+
+        <!-- Shop Screen -->
+        <div id="shop-screen" class="game-section">
+            <h2>Shop</h2>
+            <div class="section-content">
+                <div id="shop-items"></div>
+                <div id="shop-gold">Gold: 0</div>
+                <button id="exit-shop-btn">Exit Shop</button>
+            </div>
+        </div>
+
+        <!-- Equipment Screen -->
+        <div id="equipment-screen" class="game-section">
+            <h2>Equipment</h2>
+            <div class="section-content">
+            <div id="equipment-list"></div>
+            <button id="exit-equipment-btn">Exit Equipment</button>
+            </div>
+        </div>
+
+        <!-- How to Play -->
+        <div id="how-to-play" class="game-section">
+            <h2>How to Play</h2>
+            <div class="section-content">
+            <p>Learn the basics of the game here.</p>
+            <button id="back-to-menu-btn">Back to Menu</button>
+            </div>
+        </div>
+
+        <!-- Faction Select -->
+        <div id="faction-select" class="game-section">
+            <h2>Select Your Faction</h2>
+            <div class="section-content">
+            <button id="faction-1-btn">Faction 1</button>
+            <button id="faction-2-btn">Faction 2</button>
+            <button id="faction-3-btn">Faction 3</button>
+            <button id="back-to-menu-btn-faction">Back to Menu</button>
+            </div>
+        </div>
+
+        <!-- Rest Break Screen -->
+        <div id="rest-break-screen" class="game-section">
+            <h2>Rest Break</h2>
+            <div class="section-content">
+                <button id="saveButton">Save Game</button>
+                <button id="rearrangeButton">Rearrange Team</button>
+                <button id="useItemsButton">Use Items</button>
+                <button id="exit-rest-break-btn">Exit Rest Break</button>
+            </div>
+        </div>
+
+        <!-- Terrain Select Screen -->
+        <div id="terrain-select" class="game-section">
+            <h2>Select Terrain</h2>
+            <div class="section-content">
+                <div id="terrain-options">
+                    <button class="terrain-option terrain-forest">Forest</button>
+                    <button class="terrain-option terrain-desert">Desert</button>
+                    <button class="terrain-option terrain-snow">Snow</button>
+                    <button class="terrain-option terrain-volcano">Volcano</button>
+                </div>
+                <button id="confirm-terrain-btn" disabled>Confirm Terrain</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="merged-game-script.js"></script>
+</body>
+
+</html>
